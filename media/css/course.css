@@ -1,0 +1,290 @@
+/* line 4, ../sass/course.scss */
+body #main-column .back-button:hover {
+  background: #831945;
+  color: white !important;
+}
+/* line 11, ../sass/course.scss */
+body #main-column.selection.home .beta {
+  display: block;
+  padding: 15px;
+  border: 1px solid #04608C;
+  background: rgba(4, 96, 140, 0.15);
+  color: #04608C;
+  font-weight: bold;
+  position: relative;
+  -webkit-animation: pulse 2s linear;
+  -moz-animation: pulse 2s linear;
+  -o-animation: pulse 2s linear;
+  -ms-animation: pulse 2s linear;
+}
+/* line 24, ../sass/course.scss */
+body #main-column.selection.home .feedback {
+  display: inline-block;
+  color: #04608C;
+  position: relative;
+  width: 25%;
+  float: right;
+  background-color: white;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 21px 0 21px 82px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
+}
+/* line 42, ../sass/course.scss */
+body #main-column.selection.home .feedback span {
+  display: inline-block;
+  width: 63px;
+  height: 64px;
+  position: absolute;
+  z-index: 1;
+  top: -1px;
+  left: -1px;
+  background: #04608C;
+}
+/* line 51, ../sass/course.scss */
+body #main-column.selection.home .feedback span:after {
+  content: "\e079";
+  font-family: 'Glyphicons Halflings';
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 15px;
+  left: 19px;
+}
+/* line 60, ../sass/course.scss */
+body #main-column.selection.home .feedback span:hover {
+  color: white !important;
+  background: #04608C;
+}
+/* line 66, ../sass/course.scss */
+body #main-column.selection.home .banner {
+  background: url(../img/main.jpg) no-repeat;
+  background-size: auto 120%;
+  background-position: 405px -60px;
+}
+/* line 70, ../sass/course.scss */
+body #main-column.selection.home .banner .title_area {
+  background: #04608C;
+  width: 45%;
+}
+/* line 73, ../sass/course.scss */
+body #main-column.selection.home .banner .title_area:after {
+  border-left: 100px solid #04608C;
+}
+/* line 76, ../sass/course.scss */
+body #main-column.selection.home .banner .title_area .title_one {
+  font-size: 45px !important;
+  margin-top: 50px;
+}
+/* line 81, ../sass/course.scss */
+body #main-column.selection.home .banner p {
+  padding-right: 30px;
+  font-size: 13px;
+}
+/* line 86, ../sass/course.scss */
+body #main-column.selection.home .back-button {
+  color: #04608C;
+  display: none;
+}
+/* line 89, ../sass/course.scss */
+body #main-column.selection.home .back-button:hover {
+  background: #04608C;
+  color: white !important;
+}
+/* line 93, ../sass/course.scss */
+body #main-column.selection.home .back-button span {
+  background: #04608C;
+}
+/* line 98, ../sass/course.scss */
+body #main-column.selection.home .content ul {
+  counter-reset: my-counter 0;
+}
+/* line 100, ../sass/course.scss */
+body #main-column.selection.home .content ul li {
+  background: white;
+}
+/* line 102, ../sass/course.scss */
+body #main-column.selection.home .content ul li .list {
+  width: 100%;
+  float: right;
+  display: none;
+  padding-top: 25px;
+}
+/* line 107, ../sass/course.scss */
+body #main-column.selection.home .content ul li .list li {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.025);
+}
+/* line 110, ../sass/course.scss */
+body #main-column.selection.home .content ul li .list li:before {
+  display: none;
+}
+/* line 113, ../sass/course.scss */
+body #main-column.selection.home .content ul li .list li a {
+  padding: 10px;
+  font-size: 13px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+}
+/* line 118, ../sass/course.scss */
+body #main-column.selection.home .content ul li .list li a:hover {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.9);
+}
+/* line 125, ../sass/course.scss */
+body #main-column.selection.home .content ul li a {
+  width: 88.5%;
+  color: #04608C;
+}
+/* line 128, ../sass/course.scss */
+body #main-column.selection.home .content ul li a:hover {
+  background: #04608C;
+  color: white;
+}
+/* line 131, ../sass/course.scss */
+body #main-column.selection.home .content ul li a:hover:after {
+  color: white;
+}
+/* line 135, ../sass/course.scss */
+body #main-column.selection.home .content ul li a:after {
+  color: #04608C;
+}
+/* line 139, ../sass/course.scss */
+body #main-column.selection.home .content ul li .expand {
+  display: inline-block;
+  position: absolute;
+  font-family: 'Glyphicons Halflings';
+  right: 16px;
+  top: 17px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: .5;
+}
+/* line 150, ../sass/course.scss */
+body #main-column.selection.home .content ul li .expand.open {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+/* line 156, ../sass/course.scss */
+body #main-column.selection.home .content ul li .expand:hover {
+  opacity: 1;
+}
+/* line 161, ../sass/course.scss */
+body #main-column.selection.home .content ul li.pb:before {
+  background: url("../img/pb.jpg");
+  background-size: cover;
+}
+/* line 165, ../sass/course.scss */
+body #main-column.selection.home .content ul li.pb a {
+  color: #831945;
+}
+/* line 167, ../sass/course.scss */
+body #main-column.selection.home .content ul li.pb a:hover {
+  background: #831945;
+  color: white;
+}
+/* line 171, ../sass/course.scss */
+body #main-column.selection.home .content ul li.pb a:after {
+  display: none;
+}
+/* line 175, ../sass/course.scss */
+body #main-column.selection.home .content ul li.pb .expand {
+  color: #831945;
+}
+/* line 177, ../sass/course.scss */
+body #main-column.selection.home .content ul li.pb .expand:hover {
+  color: #831945 !important;
+}
+/* line 183, ../sass/course.scss */
+body #main-column.selection.home .content ul li.ft:before {
+  background: url("../img/ft.jpg");
+  background-size: cover;
+}
+/* line 187, ../sass/course.scss */
+body #main-column.selection.home .content ul li.ft a {
+  color: #939d6c;
+}
+/* line 189, ../sass/course.scss */
+body #main-column.selection.home .content ul li.ft a:hover {
+  background: #939d6c;
+  color: white;
+}
+/* line 193, ../sass/course.scss */
+body #main-column.selection.home .content ul li.ft a:after {
+  display: none;
+}
+/* line 197, ../sass/course.scss */
+body #main-column.selection.home .content ul li.ft .expand {
+  color: #939d6c;
+}
+/* line 199, ../sass/course.scss */
+body #main-column.selection.home .content ul li.ft .expand:hover {
+  color: #939d6c !important;
+}
+/* line 205, ../sass/course.scss */
+body #main-column.selection.home .content ul li.iar:before {
+  background: url("../img/iar.jpg");
+  background-size: cover;
+}
+/* line 209, ../sass/course.scss */
+body #main-column.selection.home .content ul li.iar a {
+  color: #04608c;
+}
+/* line 211, ../sass/course.scss */
+body #main-column.selection.home .content ul li.iar a:hover {
+  background: #04608c;
+  color: white;
+}
+/* line 215, ../sass/course.scss */
+body #main-column.selection.home .content ul li.iar a:after {
+  display: none;
+}
+/* line 219, ../sass/course.scss */
+body #main-column.selection.home .content ul li.iar .expand {
+  color: #04608c;
+}
+/* line 221, ../sass/course.scss */
+body #main-column.selection.home .content ul li.iar .expand:hover {
+  color: #04608c !important;
+}
+/* line 227, ../sass/course.scss */
+body #main-column.selection.home .content ul.how {
+  margin-bottom: 50px;
+}
+/* line 230, ../sass/course.scss */
+body #main-column.selection.home .content ul.how li a {
+  width: 100%;
+}
+/* line 233, ../sass/course.scss */
+body #main-column.selection.home .content ul.how li:before {
+  content: '?';
+  padding: 10px 22px;
+  background: #04608c;
+}
+/* line 241, ../sass/course.scss */
+body #main-column.selection.home .content .title {
+  color: #04608C;
+}
+/* line 249, ../sass/course.scss */
+body #main-column.selection.home .content.courses li .list li a:after {
+  display: inline-block;
+}
+/* line 256, ../sass/course.scss */
+body #main-column.selection.home .content.courses li a:after {
+  display: none;
+}
+/* line 266, ../sass/course.scss */
+body #main-column.selection.home #how .modal-dialog .modal-content .modal-header {
+  background: #04608c;
+}

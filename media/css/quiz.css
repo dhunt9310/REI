@@ -1,0 +1,404 @@
+/* line 1, ../sass/quiz.scss */
+#quiz h1 {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 0 10px 0;
+  color: #831945 !important;
+  text-transform: uppercase;
+  position: relative;
+  border-bottom: 1px solid #831945 !important;
+}
+
+/* line 11, ../sass/quiz.scss */
+#quiz h2 {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #831945;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(109, 31, 69, 0.25);
+}
+
+/* line 20, ../sass/quiz.scss */
+#quiz h3 {
+  width: 140px;
+  display: inline-block;
+  font-weight: bold;
+  background: #831945;
+  color: white;
+  position: relative;
+  padding: 50px 0;
+  border-radius: 50%;
+}
+
+/* line 30, ../sass/quiz.scss */
+#quiz .results_area {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* line 39, ../sass/quiz.scss */
+#quiz .results_area #results {
+  font-size: 18px;
+  font-weight: bold;
+  color: #831945;
+  display: block;
+}
+
+/* line 45, ../sass/quiz.scss */
+#quiz form {
+  display: none;
+}
+
+/* line 48, ../sass/quiz.scss */
+#quiz form.show {
+  display: block;
+}
+
+/* line 51, ../sass/quiz.scss */
+#quiz form.done {
+  display: block;
+}
+
+/* line 54, ../sass/quiz.scss */
+#quiz form.done input[value="C"] + span {
+  color: green !important;
+}
+
+/* line 57, ../sass/quiz.scss */
+#quiz form.done input:checked + span {
+  opacity: 1 !important;
+}
+
+/* line 60, ../sass/quiz.scss */
+#quiz form.done input:checked + span:before {
+  content: "\e014";
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  left: -60px;
+  top: 0px;
+}
+
+/* line 67, ../sass/quiz.scss */
+#quiz form.done input[value="C"]:checked + span:before {
+  content: "\e013";
+}
+
+/* line 70, ../sass/quiz.scss */
+#quiz form.done input + span {
+  color: red !important;
+  opacity: .5 !important;
+  font-weight: bold;
+  position: relative;
+}
+
+/* line 76, ../sass/quiz.scss */
+#quiz #answerSheet {
+  display: none;
+}
+
+/* line 79, ../sass/quiz.scss */
+#quiz form .tab {
+  margin-left: 25px;
+}
+
+/* line 82, ../sass/quiz.scss */
+#quiz form input + span {
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+  list-style: none;
+}
+
+/* line 87, ../sass/quiz.scss */
+#quiz .next {
+  border: 1px solid #831945;
+  margin: 50px auto 20px;
+  display: block;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 10px !important;
+  color: #831945 !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
+}
+
+/* line 103, ../sass/quiz.scss */
+#quiz .next:hover {
+  background: #831945;
+  color: white !important;
+}
+
+/* line 107, ../sass/quiz.scss */
+#quiz #buttonDiv input {
+  border: 1px solid #831945;
+  margin: 50px auto 20px !important;
+  display: block;
+  width: 95%;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 10px !important;
+  color: #831945 !important;
+  background: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
+}
+
+/* line 125, ../sass/quiz.scss */
+#quiz #buttonDiv input:hover {
+  background: #831945;
+  color: white !important;
+}
+
+/* line 129, ../sass/quiz.scss */
+#quiz #buttonDiv_two input {
+  border: 1px solid #831945;
+  margin: 50px auto 20px !important;
+  display: block;
+  width: 95%;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 10px !important;
+  color: #831945 !important;
+  background: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
+}
+
+/* line 147, ../sass/quiz.scss */
+#quiz #buttonDiv_two input:hover {
+  background: #831945;
+  color: white !important;
+}
+
+/*Elligible*/
+/* line 153, ../sass/quiz.scss */
+#elligible h1 {
+  display: block;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 0 10px 0;
+  color: #831945;
+  text-transform: uppercase;
+  position: relative;
+  border-bottom: 1px solid #831945;
+}
+
+/* line 163, ../sass/quiz.scss */
+#elligible h2 {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  color: #831945;
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(109, 31, 69, 0.25);
+}
+
+/* line 172, ../sass/quiz.scss */
+#elligible h3 {
+  width: 140px;
+  display: inline-block;
+  font-weight: bold;
+  background: #831945;
+  color: white;
+  position: relative;
+  padding: 50px 0;
+  border-radius: 50%;
+}
+
+/* line 182, ../sass/quiz.scss */
+#elligible .results_area_elli {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* line 191, ../sass/quiz.scss */
+#elligible .results_area_elli #results_two {
+  font-size: 15px;
+  font-weight: bold;
+  color: #831945;
+  display: block;
+}
+
+/* line 197, ../sass/quiz.scss */
+#elligible .results_area_elli #explanation {
+  font-size: 18px;
+}
+
+/* line 200, ../sass/quiz.scss */
+#elligible .results_area_elli #explanation .sorry {
+  color: red;
+}
+
+/* line 203, ../sass/quiz.scss */
+#elligible .results_area_elli #explanation .congrats {
+  color: green;
+}
+
+/* line 206, ../sass/quiz.scss */
+#elligible form {
+  display: none;
+}
+
+/* line 209, ../sass/quiz.scss */
+#elligible form.show {
+  display: block;
+}
+
+/* line 212, ../sass/quiz.scss */
+#elligible form.done {
+  display: block;
+}
+
+/* line 215, ../sass/quiz.scss */
+#elligible form.done input[value="C"] + span {
+  color: green !important;
+}
+
+/* line 218, ../sass/quiz.scss */
+#elligible form.done input:checked + span {
+  opacity: 1 !important;
+}
+
+/* line 221, ../sass/quiz.scss */
+#elligible form.done input:checked + span:before {
+  content: "\e014";
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  left: -60px;
+  top: 0px;
+}
+
+/* line 228, ../sass/quiz.scss */
+#elligible form.done input[value="C"]:checked + span:before {
+  content: "\e013";
+}
+
+/* line 231, ../sass/quiz.scss */
+#elligible form.done input + span {
+  color: red !important;
+  opacity: .5 !important;
+  font-weight: bold;
+  position: relative;
+}
+
+/* line 237, ../sass/quiz.scss */
+#elligible #answerSheet_two {
+  display: none;
+}
+
+/* line 240, ../sass/quiz.scss */
+#elligible form .tab {
+  margin-left: 25px;
+}
+
+/* line 243, ../sass/quiz.scss */
+#elligible form input + span {
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+  list-style: none;
+}
+
+/* line 248, ../sass/quiz.scss */
+#elligible .next_elli {
+  border: 1px solid #831945;
+  margin: 50px auto 20px;
+  display: block;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 10px !important;
+  color: #831945 !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
+}
+
+/* line 264, ../sass/quiz.scss */
+#elligible .next_elli:hover {
+  background: #831945;
+  color: white !important;
+}
+
+/* line 268, ../sass/quiz.scss */
+#elligible #buttonId input {
+  border: 1px solid #831945;
+  margin: 50px auto 20px !important;
+  display: block;
+  width: 95%;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: bold;
+  padding: 10px !important;
+  color: #831945 !important;
+  background: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .15s;
+  -moz-transition: .15s;
+  -o-transition: .15s;
+  -ms-transition: .15s;
+}
+
+/* line 286, ../sass/quiz.scss */
+#elligible #buttonId input:hover {
+  background: #831945;
+  color: white !important;
+}
+
+/* line 290, ../sass/quiz.scss */
+#elligible .kill_switch {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 296, ../sass/quiz.scss */
+#elligible .kill_switch .headers {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 20px;
+  margin-top: 50px;
+  padding-top: 50px;
+  color: red;
+  margin-bottom: 15px;
+}
+
+/* line 304, ../sass/quiz.scss */
+#elligible .kill_switch .reason {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 1px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}

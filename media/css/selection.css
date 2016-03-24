@@ -1,0 +1,85 @@
+/* line 3, ../sass/selection.scss */
+body #main-column.selection .content {
+  min-height: 450px !important;
+}
+/* line 5, ../sass/selection.scss */
+body #main-column.selection .content .title {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  color: #831945;
+  text-transform: uppercase;
+}
+/* line 13, ../sass/selection.scss */
+body #main-column.selection .content ul {
+  counter-reset: my-counter;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 18, ../sass/selection.scss */
+body #main-column.selection .content ul li {
+  margin: 5px 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+/* line 23, ../sass/selection.scss */
+body #main-column.selection .content ul li:before {
+  content: counter(my-counter,decimal-leading-zero);
+  counter-increment: my-counter;
+  position: absolute;
+  padding: 10px 13px;
+  font-size: 30px;
+  background: #831945;
+  font-weight: bold;
+  color: white;
+}
+/* line 33, ../sass/selection.scss */
+body #main-column.selection .content ul li a {
+  text-transform: uppercase;
+  color: #831945;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  background: white;
+  margin-left: 60px;
+}
+/* line 43, ../sass/selection.scss */
+body #main-column.selection .content ul li a:after {
+  content: "\e080";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  color: #831945;
+}
+/* line 52, ../sass/selection.scss */
+body #main-column.selection .content ul li a:hover {
+  background: #831945;
+  color: white;
+}
+/* line 55, ../sass/selection.scss */
+body #main-column.selection .content ul li a:hover:after {
+  color: white;
+}
+/* line 64, ../sass/selection.scss */
+body #main-column.selection .banner .title_one {
+  color: white !important;
+  font-size: 50px !important;
+  position: relative !important;
+  line-height: 45px;
+  z-index: 100 !important;
+}
+/* line 71, ../sass/selection.scss */
+body #main-column.selection .banner p {
+  position: relative;
+  left: 30px;
+  z-index: 100 !important;
+  color: white;
+  margin-top: 40px;
+}

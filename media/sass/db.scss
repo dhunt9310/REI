@@ -1,0 +1,2108 @@
+@import "course";
+@import "selection";
+@import "course_one";
+@import "course_two";
+@import "course_three";
+@import "quiz";
+
+
+.open{
+    display: inline-block !important;    
+}
+body {
+  #main-column{ 
+    width: 1035px;
+    /*width: 100%;*/
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding-top: 10px;
+    .banner{
+      overflow: hidden;
+      margin-top: 20px;
+      width: 100%;
+      display: block;
+      height: 450px;
+      background: url(../img/dc.jpg) no-repeat;
+      background-size: auto 130%;
+      padding: 0 !important;
+      background-position: 310px 0;
+      margin: 20px 0 0 0;
+      position: relative;
+      z-index: 3;
+      .title_area{
+        background: #831945;
+        display: inline-block;
+        width: 40%;
+        height: 100%;
+        position: relative;
+        &:after{
+          content: '';
+          position: absolute;
+          display: inline;
+          border-top: 250px solid transparent;
+          border-bottom: 250px solid transparent;
+          border-left: 100px solid #831945;
+          top: -25px;
+          right: -90px;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          display: inline;
+          border-top: 250px solid transparent;
+          border-bottom: 250px solid transparent;
+          border-left: 100px solid white;
+          top: -25px;
+          right: -100px;
+        }
+        .course_title{
+          position: relative !important;
+          z-index: 100 !important;
+          display: block;
+          font-size: 25px;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
+          color: rgba(255,255,255,.65);
+          left: 30px;
+          margin-top: 65px;
+        }
+        .title_one{
+          display: block;
+          text-transform: uppercase;
+          font-weight: bold;
+          position: relative;
+          color: white;
+          left: 30px;
+          font-size: 28px;
+        }
+        .title_two{
+          display: inline-block;
+          font-size: 34px;
+          line-height: 40px;
+          margin-top: 50px;
+          font-weight: bold;
+          color: white;
+          text-transform: uppercase;
+          position: relative;
+          left: 30px;
+          width: 100%;
+          z-index: 100;
+          span{
+            display: block;
+            font-size: 25px;
+            color: rgba(255,255,255,.65);
+          }
+        }
+      }
+    }
+    .back-button{
+      display: inline-block;
+      color: #831945;
+      position: relative;
+      width: 25%;
+      float: right;
+      background-color: white;
+      border-right: 1px solid rgba(0,0,0,.15); 
+      border-bottom: 1px solid rgba(0,0,0,.15); 
+      border-left: 1px solid rgba(0,0,0,.15); 
+      padding: 20px 0 20px 82px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      -webkit-transition: .15s;
+      -moz-transition: .15s;
+      -o-transition: .15s;
+      -ms-transition: .15s;
+      span{
+        display: inline-block;
+        width: 63px;
+        height: 64px;
+        position: absolute;
+        z-index: 1;
+        top: -1px;
+        left: -1px;
+        background: #831945;
+        &:hover{
+          color: white !important;
+          background: #831945;
+        }
+        &:after{
+          content: "\e079";
+          font-family: 'Glyphicons Halflings';
+          color: white;
+          font-size: 25px;
+          position: absolute;
+          top: 15px;
+          left: 19px;
+        }
+      }
+    }
+    .content{
+      display: inline-block;
+      margin: 30px 0;
+      width: 100%;
+      min-height: 530px;
+      .options{
+        display: inline-block;
+        float: left;
+        width: 23%;
+        height: 300px;
+        -webkit-transition: .15s;
+        -moz-transition: .15s;
+        -o-transition: .15s;
+        -ms-transition: .15s;
+        .top-title{
+          font-size: 20px;
+          font-weight: bold;
+          color: rgba(0,0,0,.65);
+          text-transform: uppercase;
+        }
+        ul{
+          background: white;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          margin-top: 15px;
+          &.hide_options{
+            li{
+              cursor: pointer;
+              a{
+                &:before{
+                  content: "\e079";
+                }
+                #show{
+                  display: none;
+                }
+              }
+            }
+          }
+          li{
+            border-bottom: 1px solid rgba(0,0,0,.15);
+            a{
+              display: inline-block;
+              width: 100%;
+              padding: 13px 0;
+              font-weight: bold;
+              font-size: 13px;
+              color: rgba(0,0,0,.5);
+              top: -2px;
+              &:hover{
+                color: #831945;
+                text-decoration: none;
+                &:before{
+                  color: #831945;
+                }
+              }
+              &:before{
+                content: "\e080";
+                font-family: 'Glyphicons Halflings';
+                color: rgba(0,0,0,.5);
+                font-size: 14px;
+                position: relative;
+                margin: 0 15px 0 20px;
+                top: 2px;
+              }
+            }
+            &.selected{
+              a{
+                background: #831945;
+                color: white;
+                &:before{
+                  color: white;
+                }
+              }
+            }
+            &:last-of-type{
+              border-bottom: none;
+            }
+            &#gloss{
+              a{
+                &:before{
+                  content: "\e043" !important;
+                }
+              }
+            }
+            &#links{
+              a{
+                &:before{
+                  content: "\e144" !important; 
+                }
+              }
+            }
+            &#quiz{
+              a{
+                &:before{
+                  content: "\e085" !important;
+                }
+              }
+            }
+            &#demo{
+              a{
+                &:before{
+                  content: "\e009" !important; 
+                }
+              }
+            }
+            &#customers{
+              a{
+                &:before{
+                  content: "\e008" !important; 
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+body #main-column .content #tutorial{
+    display: inline-block;
+    float: right;
+    width: 73%;
+    background: white;
+    padding: 20px;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+body #main-column .content #tutorial h1{
+    display: block;
+    margin-top: 0;
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #1f4573;
+    text-transform: uppercase;
+    position: relative;
+}
+body #main-column .content #tutorial.video{
+    padding: 0;
+}
+body #main-column.collapsed .content .options{
+    width: 5%;
+}
+body #main-column.collapsed .content .options .top-title{
+    display: none;
+}
+body #main-column.collapsed .content .options ul{
+    margin: 0;
+}
+body #main-column.collapsed .content .options ul.hide_options li a:before{
+    content: "\e080";
+}
+body #main-column.collapsed .content .options ul.hide_options #hide{
+    display: none;
+}
+body #main-column.collapsed .content .options ul.hide_options #show{
+    display: inline-block;
+}
+body #main-column.collapsed .content .options ul li a{
+    position: relative;
+}
+body #main-column.collapsed .content .options ul li a:hover:before{
+    color: white;
+}
+body #main-column.collapsed .content .options ul li a:hover{
+    background: #831945;
+}
+body #main-column.collapsed .content .options ul li a span{
+    display: inline-block;
+    position: absolute;
+    background: #831945;
+    padding: 14px 10px;
+    color: white;
+    right: -220%;
+    top: 0;
+    height: 46px;
+    width: 220%;
+    text-align: center;
+    box-shadow: 5px 1px 10px rgba(0,0,0,.25);
+    border-radius: 0 10px 10px 0;
+    opacity: 0;
+}
+body #main-column.collapsed .content .options ul li:hover a span{
+    opacity: 1;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+body #main-column.collapsed .content #tutorial{
+    width: 93%;
+}
+body #main-column.collapsed .content #tutorial iframe{
+    height: 465px !important;
+}
+body #main-column.collapsed .content #tutorial .image img{
+    width: 75% !important;
+    margin: 0 auto;
+    display: block;
+}
+body #main-column .content #tutorial #video{
+    width: 100%;
+}
+body #main-column .content #tutorial p{
+    font-size: 15px;
+    line-height: 23px;
+    color: rgba(0,0,0,.75);
+}
+body #main-column .content #tutorial form label{
+    margin-top: 30px;
+}
+body #main-column .content #tutorial form input{
+    margin: 10px 20px;
+}
+body #main-column .content #tutorial form button{
+    margin: 50px 0;
+    display: block;
+    border: 1px solid #831945;
+    color: #831945;
+    width: 100%;
+    background: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+}
+body #main-column .content #tutorial form button:hover{
+    background: #831945;
+    color: white;
+}
+body #main-column .content #tutorial ul li{
+    font-size: 15px;
+    color: rgba(0,0,0,.75);
+    padding: 5px 0;
+}
+body #main-column .content #tutorial .image{
+    display: block;
+    margin: 25px 0;
+}
+body #main-column .content #tutorial .image img{
+    width: 100%;
+    height: auto;
+}
+
+body #main-column .pagination{
+    display: block;   
+    float: right; 
+    position: relative;
+    top: 0;
+    right: 0;
+}
+body #main-column #tutorial.one .pagination .one_button{
+    opacity: .25;
+}
+body #main-column #tutorial.one .pagination .one_button a{
+    cursor: default;
+}
+body #main-column #tutorial.one .pagination .one_button a:hover{
+    text-decoration: none;
+    opacity: 1;
+}
+body #main-column #tutorial.one .pagination .arrow-left{
+    background: #831945;
+}
+  /* Course 2 */
+  body #main-column.topics #tutorial.one .pagination .arrow-left{
+    background: #939D6C;
+  }
+  body #main-column.topics #tutorial.two .pagination .arrow-right{
+    background: #939D6C;
+  }
+  /* DOD */
+  body #main-column.dod_one #tutorial.one .pagination .arrow-left{
+    background: #1f4573;
+  }
+  body #main-column.dod_one #tutorial.two .pagination .arrow-right{
+    background: #1f4573;
+  }
+  body #main-column.dod_two #tutorial.one .pagination .arrow-left{
+    background: #1f4573;
+  }
+  body #main-column.dod_two #tutorial.two .pagination .arrow-right{
+    background: #1f4573;
+  }
+  body #main-column.dod_three #tutorial.one .pagination .arrow-left{
+    background: #1f4573;
+  }
+  body #main-column.dod_three #tutorial.two .pagination .arrow-right{
+    background: #1f4573;
+  }
+  /* DOE */
+  body #main-column.doe #tutorial.one .pagination .arrow-left{
+    background: #00609c;
+  }
+  body #main-column.doe #tutorial.two .pagination .arrow-right{
+    background: #00609c;
+  }
+  /* HHS */
+  body #main-column.nih #tutorial.one .pagination .arrow-left{
+    background: #20558a;
+  }
+  body #main-column.nih #tutorial.two .pagination .arrow-right{
+    background: #20558a;
+  }
+  /* nasa */
+  body #main-column.nasa #tutorial.one .pagination .arrow-left{
+    background: #0b3d91;
+  }
+  body #main-column.nasa #tutorial.two .pagination .arrow-right{
+    background: #0b3d91;
+  }
+  /* nsf */
+  body #main-column.nsf #tutorial.one .pagination .arrow-left{
+    background: #313b52;
+  }
+  body #main-column.nsf #tutorial.two .pagination .arrow-right{
+    background: #313b52;
+  }
+
+body #main-column #tutorial.one .pagination .arrow-left:before{
+    color: white !important;
+}
+body #main-column #tutorial.two .pagination .two_button{
+    opacity: .25;
+}
+body #main-column #tutorial.two .pagination .two_button a{
+    cursor: default;
+}
+body #main-column #tutorial.two .pagination .two_button a:hover{
+    text-decoration: none;
+    opacity: 1;
+}
+body #main-column #tutorial.two .pagination .arrow-right{
+    background: #831945;
+}
+body #main-column #tutorial.two .pagination .arrow-right:before{
+    color: white !important;
+}
+body #main-column .pagination div{
+    display: inline-block;
+}
+body #main-column .pagination a{
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px;
+    font-weight: bold;
+    color: #831945;
+    opacity: .75;
+}
+body #main-column .pagination a:hover{
+    opacity: 1;
+}
+body #main-column .pagination .arrow-left{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #831945;  
+    opacity: 1;
+}
+body #main-column .pagination .arrow-left:hover{
+    background: #831945;
+}
+body #main-column .pagination .arrow-left:hover:before{
+    color: white !important;
+}
+body #main-column .pagination .arrow-right:hover{
+    background: #831945;
+}
+body #main-column .pagination .arrow-right:hover:before{
+    color: white !important;
+}
+body #main-column .pagination .arrow-left:before{
+    content: "\e079";
+    font-family: 'Glyphicons Halflings';
+    color: rgba(0,0,0,.5);
+    font-size: 18px;
+    position: relative;
+    top: -3px;
+    color: #831945;
+}
+body #main-column .pagination .arrow-right{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #831945;  
+    opacity: 1;
+}
+body #main-column .pagination .arrow-right:before{
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    color: rgba(0,0,0,.5);
+    font-size: 18px;
+    position: relative;
+    top: -3px;
+    color: #831945;
+}
+body .modal.tut{
+    background: rgba(0,0,0,.75);
+    z-index: 1050;
+}
+body .modal.tut .modal-dialog .modal-content .modal-header{
+    background: #831945;
+}
+body .modal.tut .modal-dialog .modal-content .modal-header .close{
+    position: relative;
+    z-index: 100;
+    color: white;
+    opacity: .5 !important;
+}
+body .modal.tut .modal-dialog .modal-content .modal-header .close span{
+    text-shadow: 0 1px 0 #000;
+}
+body .modal.tut .modal-dialog .modal-content .modal-header .title_one{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    color: rgba(255,255,255,.65);
+}
+body .modal.tut .modal-dialog .modal-content .modal-header .title_two{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body{
+    background: url(../img/dc.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+    max-height: 600px;
+    overflow: auto;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text{
+    padding: 20px;
+    display: table;
+    background: rgba(255,255,255,.85);    
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text .section{
+    font-weight: bold;
+    font-size: 16px;
+    color: rgba(0,0,0,.65);
+    border-bottom: 1px solid rgba(0,0,0,.15);;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text .section:last-of-type{
+    border-bottom: none;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text .section .left{
+    text-align: left;
+    width: 30%;
+    display: inline-block;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text .section .right{
+    float: right;
+    text-align: left;
+    width: 60%;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text .section .web-title{
+    font-size: 18px;
+}
+body .modal.tut .modal-dialog .modal-content .modal-body .text .section a{
+    color: #831945;
+    font-size: 13px;
+}
+.modal-backdrop.in{
+    opacity: .75 !important;
+}
+
+/* content Selection */
+#tutorial .page#one, #tutorial .page#two, #tutorial #video, #tutorial #quiz, #tutorial #elligible, #tutorial #customers{
+    display: none;
+}
+#tutorial.one .page#one{
+    display: block;
+}
+#tutorial.two .page#two{
+    display: block;
+}
+#tutorial.video #video{
+    display: block;
+}
+#tutorial.quiz #quiz{
+    display: block;
+    width: 95%;
+}
+#tutorial.elligible #elligible{
+    display: block;
+    width: 95%;
+}
+#tutorial.customers #customers{
+    display: block;
+    width: 95%;
+}
+
+/* Customers */
+.cust-modal .modal-dialog{
+    width: 800px;
+}
+.cust-modal .modal-body{
+    background: white !important;
+}
+.customers h1{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #831945;
+    position: relative;
+}
+.customers p.sub-head{
+    font-size: 14px !important;
+    padding: 15px 0;
+    border-top: 1px solid rgba(0,0,0,.25);
+    margin-bottom: 30px;
+}
+.customers ul{
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.customers ul li{
+    display: inline-block;
+    width: 49%;
+    height: 250px;
+    margin-bottom: 20px;
+    padding: 0 !important;
+    text-align: center;
+}
+.customers ul li .title{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #831945;
+    position: relative;
+    margin-top: 15px;
+    padding: 0 0 0 15px;
+}
+.customers ul li p{
+    font-size: 12px !important;
+    padding: 0 25px;
+}
+.customers ul li span{
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: black;
+}
+.customers ul li:nth-of-type(even){
+    float: right;
+}
+.customers ul li span img{
+    width: 100%;
+}
+
+
+
+/* Topic Tutorial Selection */
+body #main-column.selection.topic .banner{
+    background: url(../img/topics/main.jpg) no-repeat;
+    background-size: auto 120%;
+    background-position: 405px -60px;
+}
+body #main-column.selection.topic .banner .title_area{
+    background: #939D6C;
+}
+body #main-column.selection.topic .banner .title_area:after{
+    border-left: 100px solid #939D6C;
+}
+body #main-column.selection.topic .banner .title_one{ 
+    font-size: 45px !important;
+}
+body #main-column.selection.topic .banner p{
+    margin-top: 15px;
+    padding-right: 30px;
+    line-height: 19px;
+    font-size: 13px;
+}
+body #main-column.selection.topic .back-button{
+    color: #939D6C;
+}
+body #main-column.selection.topic .back-button:hover{
+    background: #939D6C;
+}
+body #main-column.selection.topic .back-button span{
+    background: #939D6C;
+}   
+body #main-column.selection.topic .content .title{
+    color: #939D6C;
+}
+body #main-column.selection.topic .content ul li:before{
+    background: #939D6C;
+}
+body #main-column.selection.topic .content ul li a{
+    color: #939D6C;   
+}
+body #main-column.selection.topic .content ul li a:hover{
+    background: #939D6C;
+    color: white;
+}
+body #main-column.selection.topic .content ul li a:after{
+    color: #939D6C;
+}
+body #main-column.selection.topic .content ul li a:hover:after{
+    color: white;
+}
+/* End of Selection */
+/* topics Content */
+body #main-column.topics .banner{
+    background: url(../img/topics/main.jpg) no-repeat;
+    background-size: auto 120%;
+    background-position: 405px -60px;
+} 
+body #main-column.topics .banner .title_area{
+    background: #939D6C;
+}
+body #main-column.topics .banner .title_area:after{
+    border-left: 100px solid #939D6C;
+}
+body #main-column.topics .banner .title_area .title_two{
+    font-size: 40px;
+}
+body #main-column.topics .back-button{
+    color: #939D6C;
+}
+body #main-column.topics .back-button:hover{
+    background: #939D6C;
+}
+body #main-column.topics .back-button span{
+    background: #939D6C;   
+}
+body #main-column.topics .content .options ul li.selected a{
+    color: white !important;
+    background: #939D6C;   
+}
+body #main-column.topics .content .options ul li a:hover{
+    color: #939D6C;   
+}
+body #main-column.topics .content .options ul li a:hover:before{
+    color: #939D6C;   
+}
+body #main-column.topics .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.topics.collapsed .content .options ul li a:hover{
+    background: #939D6C;
+}
+body #main-column.topics.collapsed .content .options ul li a span{
+    background: #939D6C;   
+}
+body #main-column.topics .pagination .arrow-left{
+    color: #939D6C; 
+    border: 1px solid #939D6C;
+}
+body #main-column.topics .pagination .arrow-left:before{
+    color: #939D6C; 
+}
+body #main-column.topics .pagination .arrow-left:hover{
+    background: #939D6C; 
+}
+body #main-column.topics .pagination .arrow-right{
+    color: #939D6C; 
+    border: 1px solid #939D6C;
+}
+body #main-column.topics .pagination .arrow-right:before{
+    color: #939D6C; 
+}
+body #main-column.topics .pagination .arrow-right:hover{
+    background: #939D6C; 
+}
+body #main-column.topics .pagination a{
+    color: #939D6C;    
+}
+.topics #quiz h1{
+    color: #939D6C !important;
+    border-bottom: 1px solid #939D6C !important;
+}
+.topics #quiz h2{
+    color: #939D6C !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.topics #quiz .next{
+    border: 1px solid #939D6C;
+    color: #939D6C !important;
+}
+.topics #quiz .next:hover{
+    background: #939D6C;
+    color: white !important;
+}
+.topics #quiz #buttonDiv input{
+    border: 1px solid #939D6C;
+    color: #939D6C !important;
+}
+.topics #quiz #buttonDiv input:hover{
+    background: #939D6C;
+    color: white !important;
+}
+.topics #quiz #buttonDiv_two input{
+    border: 1px solid #939D6C;
+    color: #939D6C !important;
+}
+.topics #quiz #buttonDiv_two input:hover{
+    background: #939D6C;
+    color: white !important;
+}
+.topics #quiz .results_area #results{
+    color: #939D6C;
+}
+.topics #quiz h3{
+    background: #939D6C;
+}
+body .topics .modal .modal-dialog .modal-content .modal-header{
+    background: #939D6C;
+}
+body .topics .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/topics/main.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .topics .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #939D6C;   
+}
+
+
+
+/* Agency Tutorial Selection */
+body #main-column.selection.agency .banner{
+    background: url(../img/agencies/main_bw.jpg) no-repeat;
+    background-size: auto 120%;
+    background-position: 405px -60px;
+}
+body #main-column.selection.agency .banner .title_area{
+    background: #04608c;
+}
+body #main-column.selection.agency .banner .title_area:after{
+    border-left: 100px solid #04608c;
+}
+body #main-column.selection.agency .banner .title_one{ 
+    font-size: 45px !important;
+}
+body #main-column.selection.agency .back-button{
+    color: #04608c;
+}
+body #main-column.selection.agency .back-button:hover{
+    background: #04608c;
+    color: white !important;
+}
+body #main-column.selection.agency .back-button span{
+    background: #04608c;
+}   
+body #main-column.selection.agency .content .title{
+    color: #04608c;
+}
+body #main-column.selection.agency .content ul li:before{
+    background: #04608c;
+}
+body #main-column.selection.agency .content ul li a{
+    color: #04608c;   
+}
+body #main-column.selection.agency .content ul li a:hover{
+    background: #04608c;
+    color: white;
+}
+body #main-column.selection.agency .content ul li a:after{
+    color: #04608c;
+}
+body #main-column.selection.agency .content ul li a:hover:after{
+    color: white;
+}
+/* End of Selection */
+
+/* Solicitation Tutorial Selection */
+body #main-column.selection.solicitation .banner{
+    background: url(../img/agencies/course_4/main.jpg) no-repeat;
+    background-size: auto 120%;
+    background-position: 405px -60px;
+}
+body #main-column.selection.solicitation .banner .title_area{
+    background: #5a2d28;
+}
+body #main-column.selection.solicitation .banner .title_area:after{
+    border-left: 100px solid #5a2d28;
+}
+body #main-column.selection.solicitation .banner .title_one{ 
+    font-size: 45px !important;
+    margin-top: 90px;
+}
+body #main-column.selection.solicitation .back-button{
+    color: #5a2d28;
+}
+body #main-column.selection.solicitation .back-button:hover{
+    background: #5a2d28;
+}
+body #main-column.selection.solicitation .back-button span{
+    background: #5a2d28;
+}   
+body #main-column.selection.solicitation .content .title{
+    color: #5a2d28;
+}
+body #main-column.selection.solicitation .content ul li:before{
+    background: #5a2d28;
+}
+body #main-column.selection.solicitation .content ul li a{
+    color: #5a2d28;   
+}
+body #main-column.selection.solicitation .content ul li a:hover{
+    background: #5a2d28;
+    color: white;
+}
+body #main-column.selection.solicitation .content ul li a:after{
+    color: #5a2d28;
+}
+body #main-column.selection.solicitation .content ul li a:hover:after{
+    color: white;
+}
+/* End of Selection */
+
+/* Registration Tutorial Selection */
+body #main-column.selection.registration .banner{
+    background: url(../img/agencies/course_5/mainBW.jpg) no-repeat;
+    background-size: auto 120%;
+    background-position: 405px -60px;
+}
+body #main-column.selection.registration .banner .title_area{
+    background: #b3a160;
+}
+body #main-column.selection.registration .banner .title_area:after{
+    border-left: 100px solid #b3a160;
+}
+body #main-column.selection.registration .banner .title_one{ 
+    font-size: 45px !important;
+    margin-top: 90px;
+}
+body #main-column.selection.registration .back-button{
+    color: #b3a160;
+}
+body #main-column.selection.registration .back-button:hover{
+    background: #b3a160;
+}
+body #main-column.selection.registration .back-button span{
+    background: #b3a160;
+}   
+
+body #main-column.selection.registration .content .title{
+    color: #b3a160;
+}
+body #main-column.selection.registration .content ul li:before{
+    background: #b3a160;
+}
+body #main-column.selection.registration .content ul li a{
+    color: #b3a160;   
+}
+body #main-column.selection.registration .content ul li a:hover{
+    background: #b3a160;
+    color: white;
+}
+body #main-column.selection.registration .content ul li a:after{
+    color: #b3a160;
+}
+body #main-column.selection.registration .content ul li a:hover:after{
+    color: white;
+}
+/* End of Selection */
+
+/* NASA */
+body #main-column.nasa .banner{
+    background: url(../img/agencies/nasa.jpg) no-repeat;
+    background-size: auto 185%;
+    background-position: 405px -360px;
+} 
+body #main-column.nasa .banner .title_area{
+    background: #0b3d91;
+}
+body #main-column.nasa .banner .title_area:after{
+    border-left: 100px solid #0b3d91;
+}
+body #main-column.nasa .banner .title_area .title_two{
+    font-size: 25px;
+}
+body #main-column.nasa .back-button{
+    color: #0b3d91;
+}
+body #main-column.nasa .back-button:hover{
+    background: #0b3d91;
+}
+body #main-column.nasa .back-button span{
+    background: #0b3d91;   
+}
+body #main-column.nasa .content .options ul li.selected a{
+    color: white !important;
+    background: #0b3d91;   
+}
+body #main-column.nasa .content .options ul li a:hover{
+    color: #0b3d91;   
+}
+body #main-column.nasa .content .options ul li a:hover:before{
+    color: #0b3d91;   
+}
+body #main-column.nasa .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.nasa.collapsed .content .options ul li a:hover{
+    background: #0b3d91;
+}
+body #main-column.nasa.collapsed .content .options ul li a span{
+    background: #0b3d91;   
+}
+body #main-column.nasa .pagination .arrow-left{
+    color: #0b3d91; 
+    border: 1px solid #0b3d91;
+}
+body #main-column.nasa .pagination .arrow-left:before{
+    color: #0b3d91; 
+}
+body #main-column.nasa .pagination .arrow-left:hover{
+    background: #0b3d91; 
+}
+body #main-column.nasa .pagination .arrow-right{
+    color: #0b3d91; 
+    border: 1px solid #0b3d91;
+}
+body #main-column.nasa .pagination .arrow-right:before{
+    color: #0b3d91; 
+}
+body #main-column.nasa .pagination .arrow-right:hover{
+    background: #0b3d91; 
+}
+body #main-column.nasa .pagination a{
+    color: #0b3d91;    
+}
+.nasa #quiz h1{
+    color: #0b3d91 !important;
+    border-bottom: 1px solid #0b3d91 !important;
+}
+.nasa #quiz h2{
+    color: #0b3d91 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.nasa #quiz .next{
+    border: 1px solid #0b3d91;
+    color: #0b3d91 !important;
+}
+.nasa #quiz .next:hover{
+    background: #0b3d91;
+    color: white !important;
+}
+.nasa #quiz #buttonDiv input{
+    border: 1px solid #0b3d91;
+    color: #0b3d91 !important;
+}
+.nasa #quiz #buttonDiv input:hover{
+    background: #0b3d91;
+    color: white !important;
+}
+.nasa #quiz .results_area #results{
+    color: #0b3d91;
+}
+.nasa #quiz h3{
+    background: #0b3d91;
+}
+body .nasa .modal .modal-dialog .modal-content .modal-header{
+    background: #0b3d91;
+}
+body .nasa .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/nasa.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .nasa .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #0b3d91;   
+}
+
+/* NIH */
+body #main-column.nih .banner{
+    background: url(../img/agencies/nih.jpg) no-repeat;
+    background-size: auto 115%;
+    background-position: 403px -60px;
+} 
+body #main-column.nih .banner .title_area{
+    background: #20558a;
+}
+body #main-column.nih .banner .title_area:after{
+    border-left: 100px solid #20558a;
+}
+body #main-column.nih .back-button{
+    color: #20558a;
+}
+body #main-column.nih .back-button:hover{
+    background: #20558a;
+}
+body #main-column.nih .back-button span{
+    background: #20558a;   
+}
+body #main-column.nih .content .options ul li.selected a{
+    color: white !important;
+    background: #20558a;   
+}
+body #main-column.nih .content .options ul li a:hover{
+    color: #20558a;   
+}
+body #main-column.nih .content .options ul li a:hover:before{
+    color: #20558a;   
+}
+body #main-column.nih .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.nih.collapsed .content .options ul li a:hover{
+    background: #20558a;
+}
+body #main-column.nih.collapsed .content .options ul li a span{
+    background: #20558a;   
+}
+body #main-column.nih .pagination .arrow-left{
+    color: #20558a; 
+    border: 1px solid #20558a;
+}
+body #main-column.nih .pagination .arrow-left:before{
+    color: #20558a; 
+}
+body #main-column.nih .pagination .arrow-left:hover{
+    background: #20558a; 
+}
+body #main-column.nih .pagination .arrow-right{
+    color: #20558a; 
+    border: 1px solid #20558a;
+}
+body #main-column.nih .pagination .arrow-right:before{
+    color: #20558a; 
+}
+body #main-column.nih .pagination .arrow-right:hover{
+    background: #20558a; 
+}
+body #main-column.nih .pagination a{
+    color: #20558a;    
+}
+.nih #quiz h1{
+    color: #20558a !important;
+    border-bottom: 1px solid #20558a !important;
+}
+.nih #quiz h2{
+    color: #20558a !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.nih #quiz .next{
+    border: 1px solid #20558a;
+    color: #20558a !important;
+}
+.nih #quiz .next:hover{
+    background: #20558a;
+    color: white !important;
+}
+.nih #quiz #buttonDiv input{
+    border: 1px solid #20558a;
+    color: #20558a !important;
+}
+.nih #quiz #buttonDiv input:hover{
+    background: #20558a;
+    color: white !important;
+}
+.nih #quiz .results_area #results{
+    color: #20558a;
+}
+.nih #quiz h3{
+    background: #20558a;
+}
+body .nih .modal .modal-dialog .modal-content .modal-header{
+    background: #20558a;
+}
+body .nih .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/nih.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .nih .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #20558a;   
+}
+
+/* NSF */
+body #main-column.nsf .banner{
+    background: url(../img/agencies/nsf.jpg) no-repeat;
+    background-size: auto 115%;
+    background-position: 225px -50px;
+} 
+body #main-column.nsf .banner .title_area{
+    background: #313b52;
+}
+body #main-column.nsf .banner .title_area:after{
+    border-left: 100px solid #313b52;
+}
+body #main-column.nsf .back-button{
+    color: #313b52;
+}
+body #main-column.nsf .back-button:hover{
+    background: #313b52;
+}
+body #main-column.nsf .back-button span{
+    background: #313b52;   
+}
+body #main-column.nsf .content .options ul li.selected a{
+    color: white !important;
+    background: #313b52;   
+}
+body #main-column.nsf .content .options ul li a:hover{
+    color: #313b52;   
+}
+body #main-column.nsf .content .options ul li a:hover:before{
+    color: #313b52;   
+}
+body #main-column.nsf .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.nsf.collapsed .content .options ul li a:hover{
+    background: #313b52;
+}
+body #main-column.nsf.collapsed .content .options ul li a span{
+    background: #313b52;   
+}
+body #main-column.nsf .pagination .arrow-left{
+    color: #313b52; 
+    border: 1px solid #313b52;
+}
+body #main-column.nsf .pagination .arrow-left:before{
+    color: #313b52; 
+}
+body #main-column.nsf .pagination .arrow-left:hover{
+    background: #313b52; 
+}
+body #main-column.nsf .pagination .arrow-right{
+    color: #313b52; 
+    border: 1px solid #313b52;
+}
+body #main-column.nsf .pagination .arrow-right:before{
+    color: #313b52; 
+}
+body #main-column.nsf .pagination .arrow-right:hover{
+    background: #313b52; 
+}
+body #main-column.nsf .pagination a{
+    color: #313b52;    
+}
+.nsf #quiz h1{
+    color: #313b52 !important;
+    border-bottom: 1px solid #313b52 !important;
+}
+.nsf #quiz h2{
+    color: #313b52 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.nsf #quiz .next{
+    border: 1px solid #313b52;
+    color: #313b52 !important;
+}
+.nsf #quiz .next:hover{
+    background: #313b52;
+    color: white !important;
+}
+.nsf #quiz #buttonDiv input{
+    border: 1px solid #313b52;
+    color: #313b52 !important;
+}
+.nsf #quiz #buttonDiv input:hover{
+    background: #313b52;
+    color: white !important;
+}
+.nsf #quiz .results_area #results{
+    color: #313b52;
+}
+.nsf #quiz h3{
+    background: #313b52;
+}
+body .nsf .modal .modal-dialog .modal-content .modal-header{
+    background: #313b52;
+}
+body .nsf .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/nsf.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .nsf .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #313b52;   
+}
+
+/* DOE */
+body #main-column.doe .banner{
+    background: url(../img/agencies/doe.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: 395px 0;
+} 
+body #main-column.doe .banner .title_area{
+    background: #00609c;
+}
+body #main-column.doe .banner .title_area:after{
+    border-left: 100px solid #00609c;
+}
+body #main-column.doe .back-button{
+    color: #00609c;
+}
+body #main-column.doe .back-button:hover{
+    background: #00609c;
+}
+body #main-column.doe .back-button span{
+    background: #00609c;   
+}
+body #main-column.doe .content .options ul li.selected a{
+    color: white !important;
+    background: #00609c;   
+}
+body #main-column.doe .content .options ul li a:hover{
+    color: #00609c;   
+}
+body #main-column.doe .content .options ul li a:hover:before{
+    color: #00609c;   
+}
+body #main-column.doe .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.doe.collapsed .content .options ul li a:hover{
+    background: #00609c;
+}
+body #main-column.doe.collapsed .content .options ul li a span{
+    background: #00609c;   
+}
+body #main-column.doe .pagination .arrow-left{
+    color: #00609c; 
+    border: 1px solid #00609c;
+}
+body #main-column.doe .pagination .arrow-left:before{
+    color: #00609c; 
+}
+body #main-column.doe .pagination .arrow-left:hover{
+    background: #00609c; 
+}
+body #main-column.doe .pagination .arrow-right{
+    color: #00609c; 
+    border: 1px solid #00609c;
+}
+body #main-column.doe .pagination .arrow-right:before{
+    color: #00609c; 
+}
+body #main-column.doe .pagination .arrow-right:hover{
+    background: #00609c; 
+}
+body #main-column.doe .pagination a{
+    color: #00609c;    
+}
+.doe #quiz h1{
+    color: #00609c !important;
+    border-bottom: 1px solid #00609c !important;
+}
+.doe #quiz h2{
+    color: #00609c !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.doe #quiz .next{
+    border: 1px solid #00609c;
+    color: #00609c !important;
+}
+.doe #quiz .next:hover{
+    background: #00609c;
+    color: white !important;
+}
+.doe #quiz #buttonDiv input{
+    border: 1px solid #00609c;
+    color: #00609c !important;
+}
+.doe #quiz #buttonDiv input:hover{
+    background: #00609c;
+    color: white !important;
+}
+.doe #quiz .results_area #results{
+    color: #00609c;
+}
+.doe #quiz h3{
+    background: #00609c;
+}
+body .doe .modal .modal-dialog .modal-content .modal-header{
+    background: #00609c;
+}
+body .doe .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/doe.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .doe .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #00609c;   
+}
+
+/* DOD-1 */
+body #main-column.dod_one .banner{
+    background: url(../img/agencies/dod_1.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: 375px 0px;
+} 
+body #main-column.dod_one .banner .title_area{
+    background: #1f4573;
+}
+body #main-column.dod_one .banner .title_area:after{
+    border-left: 100px solid #1f4573;
+}
+body #main-column.dod_one .back-button{
+    color: #1f4573;
+}
+body #main-column.dod_one .back-button:hover{
+    background: #1f4573;
+}
+body #main-column ul.division{
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    position: absolute;
+}
+body #main-column ul.division li{
+    display: inline-block;
+}
+body #main-column ul.division li div{
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border: 1px solid #1f4573;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+    opacity: .75;
+}
+body #main-column ul.division li div:hover{
+    background: #1f4573;
+    color: white;
+    opacity: .9;
+}
+body #main-column ul.division li.active div{
+    background: #1f4573;
+    color: white;
+    box-shadow: inset 1px 1px 5px rgba(0,0,0,.5);
+    opacity: 1;
+}
+body #main-column.dod_one .back-button span{
+    background: #1f4573;   
+}
+body #main-column.dod_one .content .options ul li.selected a{
+    color: white !important;
+    background: #1f4573;   
+}
+body #main-column.dod_one .content .options ul li a:hover{
+    color: #1f4573;   
+}
+body #main-column.dod_one .content .options ul li a:hover:before{
+    color: #1f4573;   
+}
+body #main-column.dod_one .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.dod_one.collapsed .content .options ul li a:hover{
+    background: #1f4573;
+}
+body #main-column.dod_one.collapsed .content .options ul li a span{
+    background: #1f4573;   
+}
+body #main-column.dod_one .pagination .arrow-left{
+    color: #1f4573; 
+    border: 1px solid #1f4573;
+}
+body #main-column.dod_one .pagination .arrow-left:before{
+    color: #1f4573; 
+}
+body #main-column.dod_one .pagination .arrow-left:hover{
+    background: #1f4573; 
+}
+body #main-column.dod_one .pagination .arrow-right{
+    color: #1f4573; 
+    border: 1px solid #1f4573;
+}
+body #main-column.dod_one .pagination .arrow-right:before{
+    color: #1f4573; 
+}
+body #main-column.dod_one .pagination .arrow-right:hover{
+    background: #1f4573; 
+}
+body #main-column.dod_one .pagination a{
+    color: #1f4573;    
+}
+.dod_one #quiz h1{
+    color: #1f4573 !important;
+    border-bottom: 1px solid #1f4573 !important;
+}
+.dod_one #quiz h2{
+    color: #1f4573 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.dod_one #quiz .next{
+    border: 1px solid #1f4573;
+    color: #1f4573 !important;
+}
+.dod_one #quiz .next:hover{
+    background: #1f4573;
+    color: white !important;
+}
+.dod_one #quiz #buttonDiv input{
+    border: 1px solid #1f4573;
+    color: #1f4573 !important;
+}
+.dod_one #quiz #buttonDiv input:hover{
+    background: #1f4573;
+    color: white !important;
+}
+.dod_one #quiz .results_area #results{
+    color: #1f4573;
+}
+.dod_one #quiz h3{
+    background: #1f4573;
+}
+body .dod_one .modal .modal-dialog .modal-content .modal-header{
+    background: #1f4573;
+}
+body .dod_one .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/dod_1.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .dod_one .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #1f4573;   
+}
+
+/* DOD-2 */
+body #main-column.dod_two .banner{
+    background: url(../img/agencies/dod_2.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: 375px 0px;
+} 
+body #main-column.dod_two .banner .title_area{
+    background: #1f4573;
+}
+body #main-column.dod_two .banner .title_area:after{
+    border-left: 100px solid #1f4573;
+}
+body #main-column.dod_two .back-button{
+    color: #1f4573;
+}
+body #main-column.dod_two .back-button:hover{
+    background: #1f4573;
+}
+body #main-column.dod_two .back-button span{
+    background: #1f4573;   
+}
+body #main-column.dod_two .content .options ul li.selected a{
+    color: white !important;
+    background: #1f4573;   
+}
+body #main-column.dod_two .content .options ul li a:hover{
+    color: #1f4573;   
+}
+body #main-column.dod_two .content .options ul li a:hover:before{
+    color: #1f4573;   
+}
+body #main-column.dod_two .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.dod_two.collapsed .content .options ul li a:hover{
+    background: #1f4573;
+}
+body #main-column.dod_two.collapsed .content .options ul li a span{
+    background: #1f4573;   
+}
+body #main-column.dod_two .pagination .arrow-left{
+    color: #1f4573; 
+    border: 1px solid #1f4573;
+}
+body #main-column.dod_two .pagination .arrow-left:before{
+    color: #1f4573; 
+}
+body #main-column.dod_two .pagination .arrow-left:hover{
+    background: #1f4573; 
+}
+body #main-column.dod_two .pagination .arrow-right{
+    color: #1f4573; 
+    border: 1px solid #1f4573;
+}
+body #main-column.dod_two .pagination .arrow-right:before{
+    color: #1f4573; 
+}
+body #main-column.dod_two .pagination .arrow-right:hover{
+    background: #1f4573; 
+}
+body #main-column.dod_two .pagination a{
+    color: #1f4573;    
+}
+.dod_two #quiz h1{
+    color: #1f4573 !important;
+    border-bottom: 1px solid #1f4573 !important;
+}
+.dod_two #quiz h2{
+    color: #1f4573 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.dod_two #quiz .next{
+    border: 1px solid #1f4573;
+    color: #1f4573 !important;
+}
+.dod_two #quiz .next:hover{
+    background: #1f4573;
+    color: white !important;
+}
+.dod_two #quiz #buttonDiv input{
+    border: 1px solid #1f4573;
+    color: #1f4573 !important;
+}
+.dod_two #quiz #buttonDiv input:hover{
+    background: #1f4573;
+    color: white !important;
+}
+.dod_two #quiz .results_area #results{
+    color: #1f4573;
+}
+.dod_two #quiz h3{
+    background: #1f4573;
+}
+body .dod_two .modal .modal-dialog .modal-content .modal-header{
+    background: #1f4573;
+}
+body .dod_two .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/dod_2.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .dod_two .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #1f4573;   
+}
+
+/* DOD-3 */
+body #main-column.dod_three .banner{
+    background: url(../img/agencies/dod_3.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: 375px 0px;
+} 
+body #main-column.dod_three .banner .title_area{
+    background: #1f4573;
+}
+body #main-column.dod_three .banner .title_area:after{
+    border-left: 100px solid #1f4573;
+}
+body #main-column.dod_three .back-button{
+    color: #1f4573;
+}
+body #main-column.dod_three .back-button:hover{
+    background: #1f4573;
+}
+body #main-column.dod_three .back-button span{
+    background: #1f4573;   
+}
+body #main-column.dod_three .content .options ul li.selected a{
+    color: white !important;
+    background: #1f4573;   
+}
+body #main-column.dod_three .content .options ul li a:hover{
+    color: #1f4573;   
+}
+body #main-column.dod_three .content .options ul li a:hover:before{
+    color: #1f4573;   
+}
+body #main-column.dod_three .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.dod_three.collapsed .content .options ul li a:hover{
+    background: #1f4573;
+}
+body #main-column.dod_three.collapsed .content .options ul li a span{
+    background: #1f4573;   
+}
+body #main-column.dod_three .pagination .arrow-left{
+    color: #1f4573; 
+    border: 1px solid #1f4573;
+}
+body #main-column.dod_three .pagination .arrow-left:before{
+    color: #1f4573; 
+}
+body #main-column.dod_three .pagination .arrow-left:hover{
+    background: #1f4573; 
+}
+body #main-column.dod_three .pagination .arrow-right{
+    color: #1f4573; 
+    border: 1px solid #1f4573;
+}
+body #main-column.dod_three .pagination .arrow-right:before{
+    color: #1f4573; 
+}
+body #main-column.dod_three .pagination .arrow-right:hover{
+    background: #1f4573; 
+}
+body #main-column.dod_three .pagination a{
+    color: #1f4573;    
+}
+.dod_three #quiz h1{
+    color: #1f4573 !important;
+    border-bottom: 1px solid #1f4573 !important;
+}
+.dod_three #quiz h2{
+    color: #1f4573 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.dod_three #quiz .next{
+    border: 1px solid #1f4573;
+    color: #1f4573 !important;
+}
+.dod_three #quiz .next:hover{
+    background: #1f4573;
+    color: white !important;
+}
+.dod_three #quiz #buttonDiv input{
+    border: 1px solid #1f4573;
+    color: #1f4573 !important;
+}
+.dod_three #quiz #buttonDiv input:hover{
+    background: #1f4573;
+    color: white !important;
+}
+.dod_three #quiz .results_area #results{
+    color: #1f4573;
+}
+.dod_three #quiz h3{
+    background: #1f4573;
+}
+body .dod_three .modal .modal-dialog .modal-content .modal-header{
+    background: #1f4573;
+}
+body .dod_three .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/dod_3.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .dod_three .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #1f4573;   
+}
+body .dod_three #customers h1{
+    color: #1f4573;
+}
+body .dod_three  #customers ul li .title{
+    color: #1f4573;
+}
+
+/* Solicitation */
+body #main-column.solicitation .banner{
+    background: url(../img/agencies/course_4/main_color.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: 375px 0px;
+} 
+body #main-column.solicitation .banner .title_area{
+    background: #5a2d28;
+}
+body #main-column.solicitation .banner .title_area:after{
+    border-left: 100px solid #5a2d28;
+}
+body #main-column.solicitation .back-button{
+    color: #5a2d28;
+}
+body #main-column.solicitation .back-button:hover{
+    background: #5a2d28;
+}
+body #main-column.solicitation .back-button span{
+    background: #5a2d28;   
+}
+body #main-column.solicitation .content .options ul li.selected a{
+    color: white !important;
+    background: #5a2d28;   
+}
+body #main-column.solicitation .content .options ul li a:hover{
+    color: #5a2d28;   
+}
+body #main-column.solicitation .content .options ul li a:hover:before{
+    color: #5a2d28;   
+}
+body #main-column.solicitation .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.solicitation.collapsed .content .options ul li a:hover{
+    background: #5a2d28;
+}
+body #main-column.solicitation.collapsed .content .options ul li a span{
+    background: #5a2d28;   
+}
+body #main-column.solicitation .pagination .arrow-left{
+    color: #5a2d28; 
+    border: 1px solid #5a2d28;
+}
+body #main-column.solicitation .pagination .arrow-left:before{
+    color: #5a2d28; 
+}
+body #main-column.solicitation .pagination .arrow-left:hover{
+    background: #5a2d28; 
+}
+body #main-column.solicitation .pagination .arrow-right{
+    color: #5a2d28; 
+    border: 1px solid #5a2d28;
+}
+body #main-column.solicitation .pagination .arrow-right:before{
+    color: #5a2d28; 
+}
+body #main-column.solicitation .pagination .arrow-right:hover{
+    background: #5a2d28; 
+}
+body #main-column.solicitation .pagination a{
+    color: #5a2d28;    
+}
+.solicitation #quiz h1{
+    color: #5a2d28 !important;
+    border-bottom: 1px solid #5a2d28 !important;
+}
+.solicitation #quiz h2{
+    color: #5a2d28 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.solicitation #quiz .next{
+    border: 1px solid #5a2d28;
+    color: #5a2d28 !important;
+}
+.solicitation #quiz .next:hover{
+    background: #5a2d28;
+    color: white !important;
+}
+.solicitation #quiz #buttonDiv input{
+    border: 1px solid #5a2d28;
+    color: #5a2d28 !important;
+}
+.solicitation #quiz #buttonDiv input:hover{
+    background: #5a2d28;
+    color: white !important;
+}
+.solicitation #quiz .results_area #results{
+    color: #5a2d28;
+}
+.solicitation #quiz h3{
+    background: #5a2d28;
+}
+body .solicitation .modal .modal-dialog .modal-content .modal-header{
+    background: #5a2d28;
+}
+body .solicitation .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/course_4/main_color.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .solicitation .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #5a2d28;   
+}
+body .solicitation #customers h1{
+    color: #5a2d28;
+}
+body .solicitation  #customers ul li .title{
+    color: #5a2d28;
+}
+
+/* Registration */
+body #main-column.registration .banner{
+    background: url(../img/agencies/course_5/main.jpg) no-repeat;
+    background-size: auto 100%;
+    background-position: 375px 0px;
+} 
+body #main-column.registration .banner .title_area{
+    background: #b3a160;
+}
+body #main-column.registration .banner .title_area:after{
+    border-left: 100px solid #b3a160;
+}
+body #main-column.registration .back-button{
+    color: #b3a160;
+}
+body #main-column.registration .back-button:hover{
+    background: #b3a160;
+}
+body #main-column.registration .back-button span{
+    background: #b3a160;   
+}
+body #main-column.registration .content .options ul li.selected a{
+    color: white !important;
+    background: #b3a160;   
+}
+body #main-column.registration .content .options ul li a:hover{
+    color: #b3a160;   
+}
+body #main-column.registration .content .options ul li a:hover:before{
+    color: #b3a160;   
+}
+body #main-column.registration .content .options ul li.selected a:hover:before{
+    color: white;
+}
+body #main-column.registration.collapsed .content .options ul li a:hover{
+    background: #b3a160;
+}
+body #main-column.registration.collapsed .content .options ul li a span{
+    background: #b3a160;   
+}
+body #main-column.registration .pagination .arrow-left{
+    color: #b3a160; 
+    border: 1px solid #b3a160;
+}
+body #main-column.registration .pagination .arrow-left:before{
+    color: #b3a160; 
+}
+body #main-column.registration .pagination .arrow-left:hover{
+    background: #b3a160; 
+}
+body #main-column.registration .pagination .arrow-right{
+    color: #b3a160; 
+    border: 1px solid #b3a160;
+}
+body #main-column.registration .pagination .arrow-right:before{
+    color: #b3a160; 
+}
+body #main-column.registration .pagination .arrow-right:hover{
+    background: #b3a160; 
+}
+body #main-column.registration .pagination a{
+    color: #b3a160;    
+}
+.registration #quiz h1{
+    color: #b3a160 !important;
+    border-bottom: 1px solid #b3a160 !important;
+}
+.registration #quiz h2{
+    color: #b3a160 !important;
+    border-bottom: 1px solid rgba(11, 61, 145, 0.25) !important;
+}
+.registration #quiz .next{
+    border: 1px solid #b3a160;
+    color: #b3a160 !important;
+}
+.registration #quiz .next:hover{
+    background: #b3a160;
+    color: white !important;
+}
+.registration #quiz #buttonDiv input{
+    border: 1px solid #b3a160;
+    color: #b3a160 !important;
+}
+.registration #quiz #buttonDiv input:hover{
+    background: #b3a160;
+    color: white !important;
+}
+.registration #quiz .results_area #results{
+    color: #b3a160;
+}
+.registration #quiz h3{
+    background: #b3a160;
+}
+body .registration .modal .modal-dialog .modal-content .modal-header{
+    background: #b3a160;
+}
+body .registration .modal .modal-dialog .modal-content .modal-body{
+    background: url(../img/agencies/course_5/main.jpg) no-repeat;
+    background-size: 150%;
+    background-position: -155px;
+}
+body .registration .modal .modal-dialog .modal-content .modal-body .text .section a{
+    color: #b3a160;   
+}
+body .registration #customers h1{
+    color: #b3a160;
+}
+body .registration  #customers ul li .title{
+    color: #b3a160;
+}
+
+
+/* Divisions */
+#army #army_options{
+    display: inline-block;
+}
+#army #airforce_options, #army #navy_options{
+    display: none;
+}
+#army .army_content{
+    display: inline-block!important;
+}
+#army .airforce_content, #army .navy_content{
+    display: none !important;
+}
+
+#airforce #airforce_options{
+    display: inline-block;
+}
+#airforce #army_options, #airforce #navy_options{
+    display: none;
+}
+#airforce .airforce_content{
+    display: inline-block!important;
+}
+#airforce .army_content, #airforce .navy_content{
+    display: none !important;
+}
+
+#navy #navy_options{
+    display: inline-block;
+}
+#navy #army_options, #navy #airforce_options{
+    display: none;
+}
+#navy .navy_content{
+    display: inline-block!important;
+}
+#navy .army_content, #navy .airforce_content{
+    display: none !important;
+}
+
+/* Use */
+.use{
+  display: inline-block;
+  padding: 0 0 30px;
+  width: 100%;
+  text-align: center;
+  color: rgba(0,0,0,.45);
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+}
+.use a{
+  color: #04608C;
+}
+.use a.logo{
+  display: inline-block;
+  width: 35px;
+  margin-right: 5px;
+}
+.use a.logo img{
+  display: inline-block;
+  width: 100%;
+}
+
+@keyframes pulse {
+    0% {transform: scale(1);}
+    40% {transform: scale(1.1);}
+    60% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+@-webkit-keyframes pulse {
+    0% {-webkit-transform: scale(1);}
+    40% {-webkit-transform: scale(1.1);}
+    60% {-webkit-transform: scale(1.1);}
+    100% {-webkit-transform: scale(1);}
+}
+@-moz-keyframes pulse {
+    0% {-moz-transform: scale(1);}
+    40% {-moz-transform: scale(1.1);}
+    60% {-moz-transform: scale(1.1);}
+    100% {-moz-transform: scale(1);}
+}
+@-ms-keyframes pulse {
+    0% {-ms-transform: scale(1);}
+    40% {-ms-transform: scale(1.1);}
+    60% {-ms-transform: scale(1.1);}
+    100% {-ms-transform: scale(1);}
+}
+@-o-keyframes pulse {
+    0% {-o-transform: scale(1);}
+    40% {-o-transform: scale(1.1);}
+    60% {-o-transform: scale(1.1);}
+    100% {-o-transform: scale(1);}
+}

@@ -1,0 +1,310 @@
+#quiz h1{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+    color: #831945 !important;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 1px solid #831945 !important;
+}
+#quiz h2{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #831945;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(109, 31, 69, .25);
+}
+#quiz h3{
+    width: 140px;
+    display: inline-block;
+    font-weight: bold;
+    background: #831945;
+    color: white;
+    position: relative;
+    padding: 50px 0;
+    border-radius: 50%;
+}
+#quiz .results_area{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,.5);
+    position: relative;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+#quiz .results_area #results{
+    font-size: 18px;
+    font-weight: bold;
+    color: #831945;
+    display: block;
+}
+#quiz form{
+    display: none;
+}
+#quiz form.show{
+    display: block;
+}
+#quiz form.done{
+    display: block;
+}
+#quiz form.done input[value="C"] + span{
+    color: green !important;
+}
+#quiz form.done input:checked + span{
+    opacity: 1 !important;
+}
+#quiz form.done input:checked + span:before{
+    content: "\e014";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    left: -60px;
+    top: 0px;
+}
+#quiz form.done input[value="C"]:checked + span:before{
+    content: "\e013";
+}
+#quiz form.done input + span{
+    color: red !important;
+    opacity: .5 !important;
+    font-weight: bold;
+    position: relative;
+}
+#quiz #answerSheet{
+    display: none;
+}
+#quiz form .tab{
+    margin-left: 25px;
+}
+#quiz form input + span {
+    font-size: 14px !important;
+    color: rgba(0,0,0,.5) !important;
+    list-style: none;
+}
+#quiz .next{
+    border: 1px solid #831945;
+    margin: 50px auto 20px;
+    display: block;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding: 10px !important;
+    color: #831945 !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+#quiz .next:hover{
+    background: #831945;
+    color: white !important;
+}
+#quiz #buttonDiv input{
+    border: 1px solid #831945;
+    margin: 50px auto 20px !important;
+    display: block;
+    width: 95%;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding: 10px !important;
+    color: #831945 !important;
+    background: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+#quiz #buttonDiv input:hover{
+    background: #831945;
+    color: white !important;
+}
+#quiz #buttonDiv_two input{
+    border: 1px solid #831945;
+    margin: 50px auto 20px !important;
+    display: block;
+    width: 95%;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding: 10px !important;
+    color: #831945 !important;
+    background: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+#quiz #buttonDiv_two input:hover{
+    background: #831945;
+    color: white !important;
+}
+
+/*Elligible*/
+#elligible h1{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+    color: #831945;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 1px solid #831945;
+}
+#elligible h2{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: #831945;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(109, 31, 69, .25);
+}
+#elligible h3{
+    width: 140px;
+    display: inline-block;
+    font-weight: bold;
+    background: #831945;
+    color: white;
+    position: relative;
+    padding: 50px 0;
+    border-radius: 50%;
+}
+#elligible .results_area_elli{
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,.5);
+    position: relative;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+#elligible .results_area_elli #results_two{
+    font-size: 15px;
+    font-weight: bold;
+    color: #831945;
+    display: block;
+}
+#elligible .results_area_elli #explanation{
+  font-size: 18px;
+}
+#elligible .results_area_elli #explanation .sorry{
+  color: red;
+}
+#elligible .results_area_elli #explanation .congrats{
+  color: green;
+}
+#elligible form{
+    display: none;
+}
+#elligible form.show{
+    display: block;
+}
+#elligible form.done{
+    display: block;
+}
+#elligible form.done input[value="C"] + span{
+    color: green !important;
+}
+#elligible form.done input:checked + span{
+    opacity: 1 !important;
+}
+#elligible form.done input:checked + span:before{
+    content: "\e014";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    left: -60px;
+    top: 0px;
+}
+#elligible form.done input[value="C"]:checked + span:before{
+    content: "\e013";
+}
+#elligible form.done input + span{
+    color: red !important;
+    opacity: .5 !important;
+    font-weight: bold;
+    position: relative;
+}
+#elligible #answerSheet_two{
+    display: none;
+}
+#elligible form .tab{
+    margin-left: 25px;
+}
+#elligible form input + span {
+    font-size: 14px !important;
+    color: rgba(0,0,0,.5) !important;
+    list-style: none;
+}
+#elligible .next_elli{
+    border: 1px solid #831945;
+    margin: 50px auto 20px;
+    display: block;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding: 10px !important;
+    color: #831945 !important;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+#elligible .next_elli:hover{
+    background: #831945;
+    color: white !important;
+}
+#elligible #buttonId input{
+    border: 1px solid #831945;
+    margin: 50px auto 20px !important;
+    display: block;
+    width: 95%;
+    text-align: center;
+    font-size: 16px !important;
+    font-weight: bold;
+    padding: 10px !important;
+    color: #831945 !important;
+    background: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: .15s;
+    -moz-transition: .15s;
+    -o-transition: .15s;
+    -ms-transition: .15s;
+}
+#elligible #buttonId input:hover{
+    background: #831945;
+    color: white !important;
+}
+#elligible .kill_switch{
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+#elligible .kill_switch .headers{
+  border-top: 1px solid rgba(0,0,0,.15);
+  font-size: 20px;
+  margin-top: 50px;
+  padding-top: 50px;
+  color: red;
+  margin-bottom: 15px;
+}
+#elligible .kill_switch .reason{
+  font-size: 14px;
+  color: rgba(0,0,0,.5);
+  margin-bottom: 10px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
